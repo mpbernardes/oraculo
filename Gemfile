@@ -4,6 +4,7 @@ gem 'rails', '3.0.8'
 gem 'jquery-rails'
 gem 'responders'
 gem 'devise'
+gem 'bluecloth', '2.1.0'
 
 group :development, :test do
   gem "nifty-generators"

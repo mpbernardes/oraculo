@@ -23,12 +23,32 @@ class QuestionsController < ApplicationController
 
   def create
     @question = current_user.questions.new(params[:question])
+
+#Convertendo o texto da resposta em HTML formatado
+#INI
+
+    body = @question.body
+    body = BlueCloth.new(body).to_html
+    @question.body = body
+
+#FIM
+
     @question.save
     respond_with(@question)
   end
 
   def update
     @question = current_user.questions.find(params[:id])
+
+#Convertendo o texto da resposta em HTML formatado
+#INI
+
+    body = params[:question]['body']
+    body = BlueCloth.new(body).to_html
+    params[:question]['body'] = body
+
+#FIM
+
     @question.update_attributes(params[:question])
     respond_with(@question)
   end

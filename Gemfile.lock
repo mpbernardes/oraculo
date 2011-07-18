@@ -31,6 +31,7 @@ GEM
     archive-tar-minitar (0.5.2)
     arel (2.0.10)
     bcrypt-ruby (2.1.4)
+    bluecloth (2.1.0)
     builder (2.1.2)
     capybara (0.4.0)
       celerity (>= 0.7.9)
@@ -157,6 +158,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bluecloth (= 2.1.0)
   capybara (= 0.4.0)
   cucumber-rails
   database_cleaner (= 0.6.7)
