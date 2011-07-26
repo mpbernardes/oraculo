@@ -5,7 +5,7 @@
   </div>
 
   <div id="messageBody">
-    <h4><%=raw @question.title %></h4>
+    <h4><%= @question.title %></h4>
 
     <p class="metadata">
       <span class="owner"><%= @question.owner.name %></span>
@@ -13,7 +13,7 @@
       <%= actions_for_question @question %>
     </p>
 
-    <%=raw @question.body %>
+    <%=markdown @question.body %>
   </div>
 
   <%= clearfix %>
@@ -32,7 +32,7 @@
         <span class="time"><%= time_ago_in_words answer.created_at %></span>
       </p>
 
-      <%=raw answer.body %>
+      <%=markdown answer.body %>
     </div>
 
     <%= clearfix %>

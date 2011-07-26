@@ -25,12 +25,12 @@ module ApplicationHelper
     content_for(:head) { javascript_include_tag(*args) }
   end
 
-  def submit_button(text = "Salvar", options = {})
+  def submit_button(text = "Save", options = {})
     options.reverse_merge!(:class => 'submit', :disable_with => "Wait...")
     submit_tag(text, options)
   end
 
-  def link_to_cancel(url = :back, text = "Cancelar", options = {})
+  def link_to_cancel(url = :back, text = "Cancel", options = {})
     options.reverse_merge!(:class => 'cancel')
     link_to text, url, options
   end
