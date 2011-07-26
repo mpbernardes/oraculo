@@ -5,4 +5,3 @@ module MascaraHelper
   end
 end
 
-
