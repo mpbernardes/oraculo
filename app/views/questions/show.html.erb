@@ -13,7 +13,7 @@
       <%= actions_for_question @question %>
     </p>
 
-    <%=markdown @question.body %>
+    <%=markdown  @question.body %>
   </div>
 
   <%= clearfix %>
@@ -32,7 +32,7 @@
         <span class="time"><%= time_ago_in_words answer.created_at %></span>
       </p>
 
-      <%=markdown answer.body %>
+      <%=markdown  answer.body %>
     </div>
 
     <%= clearfix %>
